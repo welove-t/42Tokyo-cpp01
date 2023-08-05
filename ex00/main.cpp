@@ -1,11 +1,17 @@
 #include "Zombie.hpp"
-#include <iostream>
 
 int main(void)
 {
-	Zombie Foo("foo");
+	// test announce
+	Zombie foo("foo");
+	foo.announce();
 
-	Foo.announce();
+	// test newZombie (heap)
+	Zombie *bar = newZombie("heap zombie");
+	bar->announce();
+
+	// Zombie foo("stack zombie");
+
 	return 0;
 }
 
