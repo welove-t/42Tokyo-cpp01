@@ -11,7 +11,7 @@ int main(void)
 	bar->announce();
 	delete bar;
 
-	// Zombie foo("stack zombie");
+	// test randomChump (stack)
 	randomChump("stack zombie");
 	return 0;
 }
