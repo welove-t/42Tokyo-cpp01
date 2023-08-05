@@ -9,9 +9,14 @@ int main(void)
 	// test newZombie (heap)
 	Zombie *bar = newZombie("heap zombie");
 	bar->announce();
+	delete bar;
 
 	// Zombie foo("stack zombie");
 
 	return 0;
 }
 
+__attribute((destructor))
+static void destructor() {
+    system("leaks -q main");
+}
