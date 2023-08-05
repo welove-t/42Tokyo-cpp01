@@ -12,11 +12,11 @@ int main(void)
 	delete bar;
 
 	// Zombie foo("stack zombie");
-
+	randomChump("stack zombie");
 	return 0;
 }
 
-__attribute((destructor))
-static void destructor() {
-    system("leaks -q main");
-}
+// __attribute((destructor))
+// static void destructor() {
+//     system("leaks -q main");
+// }
