@@ -3,7 +3,9 @@
 
 int main(void)
 {
+	Zombie Foo("foo");
 
+	Foo.announce();
 	return 0;
 }
 
