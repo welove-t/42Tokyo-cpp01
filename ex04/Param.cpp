@@ -26,7 +26,7 @@ bool	Param::checkArgc(int argc, char *argv[]) const
 {
 	if (argc != 4)
 	{
-        std::cerr << "Usage: " << argv[0] << " <filename> <s1> <s2>" << std::endl;
+        std::cerr << RED << "Usage: " << argv[0] << " <filename> <s1> <s2>" << RESET << std::endl;
         return false;
     }
 	return true;

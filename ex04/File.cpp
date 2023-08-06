@@ -7,7 +7,7 @@ File::File(Param& param) : param(param)
 bool	File::checkOpenFile(std::ifstream& input) const
 {
     if (!input.is_open()) {
-        std::cerr << "Failed to open " << param.getFileName() << std::endl;
+        std::cerr << RED << "Failed to open " << param.getFileName() << RESET << std::endl;
         return false;
     }
 	return true;
@@ -24,7 +24,7 @@ bool	File::createNewFile(void) const
 {
     std::ofstream output((param.getFileName() + ".replace").c_str());
     if (!output.is_open()) {
-        std::cerr << "Failed to open output file." << std::endl;
+        std::cerr << RED << "Failed to open output file." << RESET << std::endl;
         return false;
     }
 
@@ -52,6 +52,6 @@ bool	File::Replace(void)
     input.close();
 	if (!createNewFile())
 		return false;
-    std::cout << "File processed successfully. Replaced file: " << param.getFileName() + ".replace" << std::endl;
+    std::cout << GREEN << "File processed successfully. Replaced file: " << param.getFileName() + ".replace" << RESET << std::endl;
 	return true;
 }

@@ -3,8 +3,12 @@
 
 #include <iostream>
 #include <fstream>
-#include <string>
 #include <sstream>
+
+#define BLUE	"\e[0;34m" // Blue
+#define RED		"\e[1;31m" // Red
+#define GREEN	"\e[1;32m" // Green
+#define RESET 	"\e[0m"    // Reset
 
 class Param
 {
