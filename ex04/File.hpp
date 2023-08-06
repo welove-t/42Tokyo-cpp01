@@ -12,13 +12,12 @@ class File
 		Param& param;
 		std::ifstream input;
 		std::string content;
+		bool	checkOpenFile(std::ifstream& input);
+		void	setContent(std::ifstream& input);
 
 	public:
 		File(Param& param);
-		bool	checkOpenFile(std::ifstream& input);
 		bool	Replace(void);
-		void	setContent(std::ifstream& input);
-		void	setParam(std::string fileName, std::string s1, std::string s2);
 
 };
 
