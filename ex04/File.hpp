@@ -12,8 +12,9 @@ class File
 		Param& param;
 		std::ifstream input;
 		std::string content;
-		bool	checkOpenFile(std::ifstream& input);
+		bool	checkOpenFile(std::ifstream& input) const;
 		void	setContent(std::ifstream& input);
+		bool	createNewFile(void) const;
 
 	public:
 		File(Param& param);
