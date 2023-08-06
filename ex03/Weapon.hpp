@@ -3,19 +3,16 @@
 
 #include <iostream>
 
-#define BLUE	"\e[0;34m" // Blue
-#define RED		"\e[0;31m" // Red
-#define RESET 	"\e[0m"    // Reset
-
 class Weapon
 {
 	private:
 		std::string	type;
 
 	public:
+		Weapon(std::string type);
+
 		std::string getType(void) const;
 		void	setType(std::string type);
-
 };
 
 
