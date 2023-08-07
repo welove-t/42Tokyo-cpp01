@@ -16,7 +16,12 @@ class Harl
 		void	info(void);
 		void	warning(void);
 		void	error(void);
-
+		typedef void (Harl::*FuncPointer)();
+		struct funcMap
+		{
+			std::string level;
+			FuncPointer func;
+		};
 	public:
 		void	complain(std::string level);
 };
