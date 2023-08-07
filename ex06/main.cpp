@@ -10,11 +10,12 @@ int main(int argc, char *argv[])
 					<< " < DEBUG | INFO | WARNING | ERROR >"
 					<< RESET << std::endl;
 	}
-	harl.complain(argv[1]);
+	else
+		harl.complain(argv[1]);
 	return 0;
 }
 
-__attribute((destructor))
-static void destructor() {
-	system("leaks -q harlFilter");
-}
+// __attribute((destructor))
+// static void destructor() {
+// 	system("leaks -q harlFilter");
+// }

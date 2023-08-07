@@ -16,13 +16,19 @@ class Harl
 		void	info(void);
 		void	warning(void);
 		void	error(void);
-		enum class Level
+		enum Level
 		{
 			Debug,
 			Info,
 			Warning,
 			Error,
 		};
+		struct levelMap
+		{
+			std::string sLevel;
+			int nlevel;
+		};
+		int	getNumLevel(std::string level);
 	public:
 		void	complain(std::string level);
 };
