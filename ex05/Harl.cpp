@@ -33,3 +33,23 @@ void	Harl::error(void)
 			<< "This is unacceptable! I want to speak to the manager now."
 			<< RESET << std::endl;
 }
+
+void	Harl::complain(std::string level)
+{
+	funcMap funcArray [] = {
+		{"DEBUG", &Harl::debug},
+		{"INFO", &Harl::info},
+		{"WARNING", &Harl::warning},
+		{"ERROR", &Harl::error},
+	};
+
+	for (int i = 0; i < 4; i++)
+	{
+		if (level == funcArray[i].level)
+		{
+			(this->*funcArray[i].func)();
+			return ;
+		}
+	}
+	std::cerr << RED << "Invalid level." << RESET << std::endl;
+}
