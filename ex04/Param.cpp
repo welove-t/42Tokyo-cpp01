@@ -29,5 +29,11 @@ bool	Param::checkArgc(int argc, char *argv[]) const
         std::cerr << RED << "Usage: " << argv[0] << " <filename> <s1> <s2>" << RESET << std::endl;
         return false;
     }
+
+	if (std::strlen(argv[2]) == 0)
+	{
+        std::cerr << RED << "<s1> cannot be blank " << RESET << std::endl;
+		return false;
+	}
 	return true;
 }
